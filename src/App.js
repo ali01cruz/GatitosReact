@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import {Switch,Route} from "react-router-dom";
+import NavbarComp from './components/navbarcomp/navbarcomp';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+        <NavbarComp/>
+        <Switch>
+          <Route exact path="/" >
+                      <h1>HOLA</h1>
+          </Route>
+          <Route>
+              <h1> PAG NOT FOUND 404</h1>
+          </Route>
+        </Switch>
+
+  
     </div>
   );
 }
