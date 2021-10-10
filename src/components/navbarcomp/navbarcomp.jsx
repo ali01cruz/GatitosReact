@@ -14,6 +14,9 @@ export default function NavbarComp(){
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav>
+                        <NavLink exact to="/home" activeClassName="active" ><div className="boton">Home</div></NavLink>
+                    </Nav>
+                    <Nav>
                         <NavLink exact to="/about" activeClassName="active" ><div className="boton">About</div></NavLink>
                     </Nav>
                 </Navbar.Collapse>
