@@ -2,6 +2,7 @@ import './App.css';
 import {Switch,Route} from "react-router-dom";
 import NavbarComp from './components/navbarcomp/navbarcomp';
 import About from './components/about/about';
+import Home from './components/home/home';
 
 
 function App() {
@@ -11,7 +12,10 @@ function App() {
         <NavbarComp/>
         <Switch>
           <Route exact path="/" >
-                      <h1>HOLA</h1>
+                      <h1>HOLA landin Page</h1>
+          </Route>
+          <Route exact path="/home" >
+                      <Home/>
           </Route>
           <Route exact path="/about" >
                       <About/>
