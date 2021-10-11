@@ -6,6 +6,7 @@ import About from './components/about/about'
 
 import NavbarComp from './components/navbarcomp/navbarcomp';
 import Landing from './components/landingpage/landingpage';
+import SideBar from './components/sideBar/sideBar';
 function App() {
   //con la badera lo que hace es que cuando se inicia el componente
   //usando el use effec  lo va a negar
@@ -24,6 +25,7 @@ function App() {
       {bandera && <NavbarComp/>}
       <Route exact path="/home">
         <Home/>
+        <SideBar/>
       </Route>
 
       <Route path="/about">

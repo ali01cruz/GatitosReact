@@ -1,0 +1,26 @@
+.sideBar {
+    width: 100vw;
+    box-sizing: border-box;
+   
+}
+.buscador{
+    display: flex;
+    position: relative; 
+   
+}
+
+.buscador .sideBar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #4b4276;
+}
+
+.buscador .sideBar ul li{
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(225,255,255,0.05); 
+    list-style: none;
+    text-decoration: none;
+    
+}
