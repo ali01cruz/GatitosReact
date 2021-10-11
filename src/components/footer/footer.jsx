@@ -16,8 +16,8 @@ export default function Footer(){
                         <ul className="col-12 col-md-3 list-unstyled">
                             <li className="font-weight-bold mb-2">Cruz Ali Emanuel</li>
                             <li >
-                                <a href="" className="mx-2"><i className="bi bi-facebook"></i></a>
-                                <a href="" className="mx-2"><i class="bi bi-linkedin"></i></a>
+                                <a href="" target="_blank" className="mx-2"><i className="bi bi-facebook"></i></a>
+                                <a href="" target="_blank" className="mx-2"><i class="bi bi-linkedin"></i></a>
                             </li>
                         </ul>
                         <ul className="col-12 col-md-3 list-unstyled">
