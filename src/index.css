@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --colo1: rgba(199, 43, 69, 0.657);
+  --colo2: rgb(88, 238, 100);
+  --colo3: rgb(57, 174, 228);
+}
+
+/*   asi se define un color.component .header {
+  color: var(--header-color, blue);
+} */
