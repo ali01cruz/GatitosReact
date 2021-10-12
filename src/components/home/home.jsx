@@ -1,3 +1,4 @@
+import HookForm from "../form/form";
 
 export default function Home(){
 
@@ -5,7 +6,7 @@ export default function Home(){
        <div >
        
         Hola mundo
-        
+        <HookForm/>
        </div>
 )
 
