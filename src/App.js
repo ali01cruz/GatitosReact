@@ -1,8 +1,10 @@
 import './App.css';
+
 import { useState } from 'react';
 import {Route} from "react-router-dom";
 import Home from './components/home/home';
 import About from './components/about/about'
+
 
 import NavbarComp from './components/navbarcomp/navbarcomp';
 import Landing from './components/landingpage/landingpage';
@@ -18,6 +20,7 @@ function App() {
   
   return (
     <div className="App">
+
       <Route exact path="/">
           <Landing activarNav={activarNav}/>
       </Route>
@@ -30,6 +33,7 @@ function App() {
            
             <About/>
       </Route>
+
 
     </div>
   );

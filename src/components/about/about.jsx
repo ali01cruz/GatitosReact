@@ -29,8 +29,8 @@ export default function About(){
             </p>
 
             <Container className="d-flex justify-content-center">
-                <Row>
-                    <Col>
+                <Row >
+                    <Col className="d-flex aling-center justify-content-center">
                         <Card style={mystyleCard}  >
                             <Card.Img variant="top" src={ali} />
                             <Card.Body>
@@ -49,7 +49,7 @@ export default function About(){
                         </Card>
                     </Col>
                     
-                    <Col>
+                    <Col className="d-flex aling-center justify-content-center">
                         <Card style={mystyleCard}>
                             <Card.Img style={mystyleisil} variant="top" src={sil} />
                             <Card.Body>
