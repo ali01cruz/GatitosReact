@@ -1,33 +1,40 @@
 import './App.css';
-import {Switch,Route} from "react-router-dom";
+
+import { useState } from 'react';
+import {Route} from "react-router-dom";
+import Home from './components/home/home';
+import About from './components/about/about'
+
+
 import NavbarComp from './components/navbarcomp/navbarcomp';
-import About from './components/about/about';
-import Footer from './components/footer/footer';
-
-
+import Landing from './components/landingpage/landingpage';
 function App() {
+  //con la badera lo que hace es que cuando se inicia el componente
+  //usando el use effec  lo va a negar
+  //como se inicia  en true  , luego cuando
+  //preciona el boton niega de vuelta
+  const[bandera,setBandera] = useState(true)
+  function activarNav (){
+    setBandera(!bandera)
+  }
+  
   return (
     <div className="App">
-     
-        <NavbarComp/>
-        <Switch>
-          
-          <Route exact path="/" >
-                      <h1>HOLA</h1>
-                      <Footer/>
-          </Route>
 
-          <Route exact path="/about" >
-                      <About/>
-                      <Footer/>
-          </Route>
+      <Route exact path="/">
+          <Landing activarNav={activarNav}/>
+      </Route>
+      {bandera && <NavbarComp/>}
+      <Route exact path="/home">
+        <Home/>
+      </Route>
 
-          <Route>
-              <h1> PAG NOT FOUND 404</h1>
-          </Route>
-        </Switch>
+      <Route path="/about">
+           
+            <About/>
+      </Route>
 
-  
+
     </div>
   );
 }
