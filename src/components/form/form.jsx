@@ -34,6 +34,7 @@ const HookForm = () => {
     const styleform={
         maxWidth: "500px",
         margin: 'auto',
+        marginTop: '5%',
         backgroundColor:'var(--color1)',
         padding:'1%',
         borderRadius:'5px'
@@ -43,6 +44,8 @@ const HookForm = () => {
         nombre:"",
         mensaje:"",
     })
+
+    ///enviando formulario
     function onSubmitForm(e){
         //este prevente defaul es para que no se envien directamente por el metodo get 
         //cuando se aprete el boton
@@ -52,6 +55,12 @@ const HookForm = () => {
                el nombre es : ${stateForm.nombre}
                el mensaje es : ${stateForm.mensaje}
         `)
+        ///limpiando formulario
+        setStateForm({
+            email:"",
+            nombre:"",
+            mensaje:"",
+        })
     }
     const[error,setError] = useState({
         email: "el email es requerido",
