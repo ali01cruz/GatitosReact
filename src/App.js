@@ -8,7 +8,11 @@ import About from './components/about/about'
 
 import NavbarComp from './components/navbarcomp/navbarcomp';
 import Landing from './components/landingpage/landingpage';
+
+import HookForm from './components/form/form';
+
 import Footer from './components/footer/footer';
+
 function App() {
   //con la badera lo que hace es que cuando se inicia el componente
   //usando el use effec  lo va a negar
@@ -28,6 +32,9 @@ function App() {
       {bandera && <NavbarComp/>}
       <Route exact path="/home">
         <Home/>
+      </Route>
+      <Route exact path="/form">
+        <HookForm/>
       </Route>
 
       <Route path="/about">
