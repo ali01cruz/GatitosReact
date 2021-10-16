@@ -1,0 +1,22 @@
+body{
+    min-height: 100vh;
+    background: #f0f0f0;
+  }
+footer{
+    margin-top: 40px;
+    width: 100%;
+    position:absolute;
+    bottom: 0; 
+    
+  }
+  @media screen and (max-width: 750px){
+    footer{
+        margin-top: 40px;
+        width: 100%;
+        position:sticky;
+        bottom: 0; 
+       
+      }
+
+  }
+  
