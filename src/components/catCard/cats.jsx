@@ -1,12 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import './cats.css';
 import Axios from 'axios';
 import { useEffect, useState } from "react";
 import CatCard from "./catCard";
 
 export default function Cats (props){
 
-    const[url, setImage]= useState('');
+    
     const[cat, setCat]=useState([]);
     
     useEffect(()=>{
@@ -23,24 +23,25 @@ export default function Cats (props){
 
    
     return (
-        <div name='name' className="cats">
-            <h2>Gatos</h2>
+        <div className="lista">
+            
           
             {cat.map((element)=>(
                
-              <div className="lista">  <CatCard
+              <div key="element.id" >  
+                        <CatCard
                 
-                id={element.id}
-               
-                name={element.name}
-                desc={element.description}
-                imagen={
-                    element.image?.url
-                }
-                url={element.image?.id}
-                           
-            /> 
-                 </div>
+                        id={element.id}
+                    
+                        name={element.name}
+                        desc={element.description}
+                        imagen={
+                            element.image?.url
+                        }
+                        url={element.image?.id}
+                                
+                        /> 
+                </div>
                  
             ))}
             

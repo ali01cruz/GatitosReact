@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function SideBar (){
     
-    const[selector, setSelector]= useState('');
+  
     const[raza, setRaza]=useState([]);
     useEffect(()=>{
         Axios.get('https://api.thecatapi.com/v1/categories')
