@@ -1,4 +1,5 @@
 import HookForm from "../form/form";
+import Cats from "../catCard/cats";
 
 export default function Home(){
 
@@ -6,7 +7,8 @@ export default function Home(){
        <div >
        
         Hola mundo
-       
+      
+        <Cats/>
        </div>
 )
 
