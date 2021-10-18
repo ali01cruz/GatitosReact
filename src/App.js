@@ -9,7 +9,6 @@ import About from './components/about/about'
 import NavbarComp from './components/navbarcomp/navbarcomp';
 import Landing from './components/landingpage/landingpage';
 
-
 import HookForm from './components/form/form';
 
 import Footer from './components/footer/footer';
@@ -39,6 +38,7 @@ function App() {
       {bandera && <NavbarComp/>}
       <Route exact path="/home">
         <Home/>
+        <SideBar/>
       </Route>
       
       <Route exact path="/form">
