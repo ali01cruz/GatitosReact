@@ -4,8 +4,18 @@ import {NavLink} from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar"
 import Container from "react-bootstrap/Container" 
 import Nav from "react-bootstrap/Nav" 
+import { FormControl,Form ,Button } from "react-bootstrap"
+import { useState } from "react";
+import { BuscarGato } from "../../actions/actions";
+import { connect } from "react-redux";
+function NavbarComp({ BuscarGato }){
+    const [valorBuscar,setValorBuscar] = useState('');
+    //siempre crear un set por que sino no funciona
 
-export default function NavbarComp(){
+    function onSubmitForm(){    
+        BuscarGato(valorBuscar)
+        setValorBuscar('')
+    }
 
     return (    
         <Navbar collapseOnSelect expand="xxl" bg="dark" variant="dark">
@@ -19,6 +29,18 @@ export default function NavbarComp(){
                     <Nav>
                         <NavLink exact to="/about" activeClassName="active" ><div className="boton">About</div></NavLink>
                     </Nav>
+                    <Form className="d-flex">
+                        <FormControl
+                        type="search"
+                        placeholder="Search"
+                        className="me-2"
+                        aria-label="Search"
+                        value={valorBuscar} 
+                        onChange={(e)=>setValorBuscar(e.target.value)}
+                        />
+                        <Button variant="outline-success" onClick={()=>onSubmitForm()}>Search</Button>
+                    </Form>
+
                 </Navbar.Collapse>
             </Container>
 
@@ -26,3 +48,5 @@ export default function NavbarComp(){
 )
 
 }
+
+export default connect(null,{BuscarGato})(NavbarComp)

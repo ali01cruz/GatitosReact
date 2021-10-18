@@ -10,7 +10,6 @@ export default function SideBar (){
     useEffect(()=>{
         Axios.get('https://api.thecatapi.com/v1/categories')
         .then((info)=>{
-            console.log(info.data)
             setRaza(info.data)
         })
         .catch((err)=>{
@@ -30,7 +29,7 @@ export default function SideBar (){
                         <select>
                         <option selected>Open this select</option>
                             {raza.map ( (raz) => (
-                                <option value={raz.id}>
+                                <option value={raz.id} key={raz.id}>
                                 {raz.name }
                                 </option>
                             ))}

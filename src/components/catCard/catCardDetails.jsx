@@ -6,7 +6,7 @@ import { Card, Button} from 'react-bootstrap';
 import './cats.css';
 import { NavLink } from "react-router-dom";
 
-export default function CatCardDetails(props){
+export default function CatCardDetails(){
      
     const {name, url}=useParams()
     const[cat, setCat]=useState([]);
@@ -14,11 +14,10 @@ export default function CatCardDetails(props){
     
     useEffect(()=>{
         Axios.get(`https://api.thecatapi.com/v1/breeds/search?q=${name}`) 
+
       /*  Axios.get(`https://api.thecatapi.com/v1/breeds`)*/
         .then((info)=>{
-            console.log(info.data)
             setCat(info.data)
-        
         })
         .catch((err)=>{
             console.log('errores', err)
@@ -29,7 +28,6 @@ export default function CatCardDetails(props){
         Axios.get(`https://api.thecatapi.com/v1/images/${url}`) 
       /*  Axios.get(`https://api.thecatapi.com/v1/breeds`)*/
         .then((info)=>{
-            console.log(info.data)
             setImg(info.data)
         
         })
@@ -39,14 +37,14 @@ export default function CatCardDetails(props){
     }, [])
 
 /*     const elemento = cat.find((masc)=> masc.name == {idp}); */
-  console.log({cat})
+  console.log(`https://api.thecatapi.com/v1/images/${url}`)
 
     return(
         <div className=''>
                           
               {cat.map((ele)=>(
                
-               <div >  
+               <div key ={ele.id}>  
 
 
                 <Card className='catCard' >
@@ -65,7 +63,7 @@ export default function CatCardDetails(props){
                             <Card.Link href={ele.vetstreet_url} target="_blank"> Vetstreet</Card.Link>
                             <Card.Link href={ele.wikipedia_url} target="_blank">Wikipedia</Card.Link>
                         </Card.Text>
-                        <NavLink to={`/home/cats/`}>
+                        <NavLink to={`/home`}>
                             <Button variant="primary">Volver</Button>
                         </NavLink>
                     </Card.Body>

@@ -1,32 +1,12 @@
 import React from "react";
 import './cats.css';
-import Axios from 'axios';
-import { useEffect, useState } from "react";
 import CatCard from "./catCard";
-
-export default function Cats (props){
-
-    
-    const[cat, setCat]=useState([]);
-    
-    useEffect(()=>{
-        Axios.get('https://api.thecatapi.com/v1/breeds')
-        .then((info)=>{
-            console.log(info.data)
-            setCat(info.data)
-        
-        })
-        .catch((err)=>{
-            console.log('errores', err)
-        })
-    }, [])
-
-   
+import { connect } from "react-redux"
+function Cats ({datosfiltrados}){
+   //cat es el listado de las cosas filtradas
     return (
         <div className="lista">
-            
-          
-            {cat.map((element)=>(
+            {datosfiltrados.map((element)=>(
                
               <div key="element.id" >  
                         <CatCard
@@ -35,18 +15,19 @@ export default function Cats (props){
                     
                         name={element.name}
                         desc={element.description}
-                        imagen={
-                            element.image?.url
-                        }
-                        url={element.image?.id}
-                                
+                        url={element.image?.id?element.image?.id:element.reference_image_id}
                         /> 
                 </div>
-                 
             ))}
-            
         </div>
     );
 
 
 }
+const mapStateToProps = state =>{
+  return {
+    datosfiltrados:state.datosfiltrados
+  }
+}
+
+export default connect(mapStateToProps)(Cats)
