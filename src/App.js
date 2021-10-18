@@ -14,7 +14,7 @@ import HookForm from './components/form/form';
 import Footer from './components/footer/footer';
 
 import CatCardDetails from './components/catCard/catCardDetails';
-import CatCard from './components/catCard/catCard';
+
 import Cats from './components/catCard/cats';
 
 

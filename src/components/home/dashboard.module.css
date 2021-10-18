@@ -1,0 +1,9 @@
+.containerDash{
+    display: flex;
+    background-color: #c6c82d11;
+    height: 89vh;
+    width: 100vw;
+    box-sizing: content-box;
+
+}
+

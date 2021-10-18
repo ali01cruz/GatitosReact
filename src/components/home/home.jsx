@@ -1,15 +1,16 @@
-import HookForm from "../form/form";
-import Cats from "../catCard/cats";
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import SectionComponent from '../seccion/seccion'
+import SideBar from '../sideBar/sideBar'
+import das from './dashboard.module.css'
 export default function Home(){
 
     return (    
-       <div >
-       
-        Hola mundo
       
-        <Cats/>
-       </div>
+        <div className={das.containerDash}  >
+                <SideBar/>
+                <SectionComponent/>
+        </div>
+     
 )
 
 }
