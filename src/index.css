@@ -13,9 +13,9 @@ code {
 }
 
 :root {
-  --colo1: rgba(199, 43, 69, 0.657);
-  --colo2: rgb(88, 238, 100);
-  --colo3: rgb(57, 174, 228);
+  --color1: rgba(199, 43, 69, 0.657);
+  --color2: rgb(88, 238, 100);
+  --color3: rgb(57, 174, 228);
 }
 
 /*   asi se define un color.component .header {
