@@ -38,7 +38,7 @@ function App() {
       {bandera && <NavbarComp/>}
       <Route exact path="/home">
         <Home/>
-        <SideBar/>
+   
       </Route>
       
       <Route exact path="/form">
