@@ -1,47 +1,34 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Axios from 'axios';
-import { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import './cats.css';
+import { Card, Button} from 'react-bootstrap';
 
 export default function CatCard (props){
-
-    const[selector, setSelector]= useState('');
-    const[raza, setRaza]=useState([]);
-    
-    useEffect(()=>{
-        Axios.get('https://api.thecatapi.com/v1/categories')
-        .then((info)=>{
-            console.log(info.data)
-            setRaza(info.data)
-        })
-        .catch((err)=>{
-            console.log('errores', err)
-        })
-    }, [])
-
-
-    return(
-        <div className="buscador text-light">
-            <div className="sideBar">
-                <h3>SideBar</h3>
-                <ul>
-                    <li>orden</li>
-                    <li> </li>
-                    <li>selector x raza</li>
-                    <li>
-                        <select>
-                        <option selected>Open this select</option>
-                            {raza.map ( (raz) => (
-                                <option value={raz.id}>
-                                {raz.name }
-                                </option>
-                            ))}
-                        </select>
-                    </li>
-                </ul>
+        const style = {
+            margin: '0 auto',
+            background: 'var(--card-color)',
+            width: '400px',
+            padding: '20px',                    
+          };
+         
+        return (
+            <div  >
+               <div> 
+                    <NavLink to={`/home/cats/${props.name}/${props.url}`}>
+                        <Card style={{ width: '18rem', height:'25rem', margin:'10px', paddingTop:'8px' }}>
+                          { <Card.Img style={{  height:'20rem',}} 
+                            variant="top" src={props.imagen} alt='Imagen no disponible'/> }
+                            
+                            <Card.Body>
+                                <Button variant="primary">{props.name}</Button>
+                            </Card.Body>
+                        </Card>             
+                       
+                    </NavLink>
+                </div> 
             </div>
-        </div>
-    );
-
+        );
+    
 
 }
