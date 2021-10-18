@@ -20,8 +20,6 @@ const rootReducer = (state = initialState, action) => {
           datosfiltrados: action.payload,
         }
     case "FILTER":
-      console.log(state.datosfiltrados.length);
-        
           return {
             ...state,
             datosfiltrados: filter(
@@ -30,7 +28,11 @@ const rootReducer = (state = initialState, action) => {
               action.payload.attribute1
             ),
           }
-    
+    case "BUSCAR_GATO":
+            return {
+              ...state,
+              datosfiltrados: action.payload,
+            };
     default:
       return state;
   }

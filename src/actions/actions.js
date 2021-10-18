@@ -35,3 +35,12 @@ export const filterBy = (condition, attribute1) => {
   };
 };
 
+export const BuscarGato = (name) => {
+  return async function (dispatch) {
+    const { data } = await axios.get(`https://api.thecatapi.com/v1/breeds/search?q=${name}`);
+    dispatch({
+      type: "BUSCAR_GATO",
+      payload: data,
+    });
+  };
+};

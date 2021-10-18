@@ -6,14 +6,15 @@ import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav" 
 import { FormControl,Form ,Button } from "react-bootstrap"
 import { useState } from "react";
-
-export default function NavbarComp(){
+import { BuscarGato } from "../../actions/actions";
+import { connect } from "react-redux";
+function NavbarComp({ BuscarGato }){
     const [valorBuscar,setValorBuscar] = useState('');
     //siempre crear un set por que sino no funciona
 
     function onSubmitForm(){    
-
-        setValorBuscar(valorBuscar)
+        BuscarGato(valorBuscar)
+        setValorBuscar('')
     }
 
     return (    
@@ -47,3 +48,5 @@ export default function NavbarComp(){
 )
 
 }
+
+export default connect(null,{BuscarGato})(NavbarComp)
