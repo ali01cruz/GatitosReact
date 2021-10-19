@@ -1,21 +1,10 @@
 import React from "react";
 import "./sideBar.css";
-import Axios from 'axios';
-import { useEffect, useState } from "react";
+
+import Xinteligencia from "../filtros/xinteligencia";
 
 export default function SideBar (){
     
-  
-    const[raza, setRaza]=useState([]);
-    useEffect(()=>{
-        Axios.get('https://api.thecatapi.com/v1/categories')
-        .then((info)=>{
-            setRaza(info.data)
-        })
-        .catch((err)=>{
-            console.log('errores', err)
-        })
-    }, [])
 
     return(
         <div className="buscador text-light">
@@ -26,14 +15,7 @@ export default function SideBar (){
                     <li> </li>
                     <li>selector x raza</li>
                     <li>
-                        <select>
-                        <option selected>Open this select</option>
-                            {raza.map ( (raz) => (
-                                <option value={raz.id} key={raz.id}>
-                                {raz.name }
-                                </option>
-                            ))}
-                        </select>
+                        <Xinteligencia/>
                     </li>
                 </ul>
             </div>

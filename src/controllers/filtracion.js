@@ -1,17 +1,24 @@
 //atributo es el atributo del objeto
 
 ///con dicicion de con que cosa se quiere filtrar
-export const filter = (breedList, condition, attribute) => {
+export const filter = (listagatitos, condition, attribute) => {
     try {
-        const resutado=breedList.filter(
+        const resutado=listagatitos.filter(
             //primero pregunto si existe el atributo
-          (breed) => breed[attribute].includes(condition)
+          (gatito) => gatito[attribute] && gatito[attribute] == condition
         )
 
         return resutado;
     } catch (error) {
-        return null
+        return []
     }
     
 };
+ 
 
+
+/* export const filter = (breedList, condition, attribute) => {
+    return breedList.filter(
+      (breed) => breed[attribute] && breed[attribute] == condition
+    );
+  }; */

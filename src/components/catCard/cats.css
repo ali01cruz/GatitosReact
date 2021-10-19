@@ -3,7 +3,7 @@ p{
 }
 
 .lista{
-    padding-top: 42px;
+   
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,3 +17,6 @@ p{
     margin:auto;
 }
 
+.card{
+    display: block;
+}
