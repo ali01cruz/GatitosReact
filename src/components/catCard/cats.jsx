@@ -10,12 +10,10 @@ function Cats ({datosfiltrados}){
                
               <div key="element.id" >  
                         <CatCard
-                
                         id={element.id}
-                    
                         name={element.name}
                         desc={element.description}
-                        url={element.image?.id?element.image?.id:element.reference_image_id}
+                        url={element.reference_image_id}
                         /> 
                 </div>
             ))}
