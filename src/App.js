@@ -25,19 +25,17 @@ function App() {
   //como se inicia  en true  , luego cuando
   //preciona el boton niega de vuelta
   const[bandera,setBandera] = useState(true)
-  function activarNav (){
-    setBandera(!bandera)
-  }
   
   return (
     <div className="App">
 
       <Route exact path="/">
-          <Landing activarNav={activarNav}/>
+          <Landing />
       </Route>
       
-      {bandera && <NavbarComp/>}
+     
       <Route exact path="/home">
+        <NavbarComp/>
         <Home/>
       </Route>
       
@@ -55,11 +53,11 @@ function App() {
       </Switch>
 
       <Route path="/about">
-           
+      <NavbarComp/>
            <About/>
      </Route>
 
-      {bandera && <Footer/>}
+    
       
 
     </div>
