@@ -9,13 +9,12 @@ import About from './components/about/about'
 import NavbarComp from './components/navbarcomp/navbarcomp';
 import Landing from './components/landingpage/landingpage';
 
-
 import HookForm from './components/form/form';
 
 import Footer from './components/footer/footer';
 
 import CatCardDetails from './components/catCard/catCardDetails';
-import CatCard from './components/catCard/catCard';
+
 import Cats from './components/catCard/cats';
 
 
@@ -37,6 +36,7 @@ function App() {
       <Route exact path="/home">
         <NavbarComp/>
         <Home/>
+   
       </Route>
       
       <Route exact path="/form">
