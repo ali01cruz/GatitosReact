@@ -49,7 +49,7 @@ export default function CatCardDetails(){
 
                 <Card className='catCard' >
                     <Card.Header as="h5">Origen: <b>{ele.origin}</b></Card.Header>
-                    <Card.Body>
+                    <Card.Body className="texto">
                         <Card.Title> <b>{ele.name}</b></Card.Title>
                         <Card.Img variant="top" src={img.url}  style={{ width: '20rem',display:'block',margin:'auto'}}/>
                         <Card.Text>
@@ -59,12 +59,13 @@ export default function CatCardDetails(){
                             <p>Nivel de Afecto: <b>{ele.affection_level}</b></p>
                             <p>Nivel de Energia: <b>{ele.energy_level}</b></p>
                             <p>Mas información en:</p>
-                            <Card.Link href={ele.cfa_url} target="_blank">The Cat Fanciers’ Association, Inc.</Card.Link>
-                            <Card.Link href={ele.vetstreet_url} target="_blank"> Vetstreet</Card.Link>
-                            <Card.Link href={ele.wikipedia_url} target="_blank">Wikipedia</Card.Link>
+                            <Card.Link  className="link" href={ele.cfa_url} target="_blank">The Cat Fanciers’ Association, Inc.</Card.Link>
+                            <Card.Link className="link" href={ele.vetstreet_url} target="_blank"> Vetstreet</Card.Link>
+                            <Card.Link className="link" href={ele.wikipedia_url} target="_blank">Wikipedia</Card.Link>
+
                         </Card.Text>
                         <NavLink to={`/home`}>
-                            <Button variant="primary">Volver</Button>
+                            <Button className="volver" variant="primary">Volver</Button>
                         </NavLink>
                     </Card.Body>
                 </Card>

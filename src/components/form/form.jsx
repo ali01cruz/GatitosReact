@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState } from 'react';
 import { Form ,Button} from 'react-bootstrap'
 import {NavLink } from "react-router-dom";
+import './dd.css';
+import '../footer/footer.css';
 
 export function validacion(input){
 
@@ -34,8 +36,8 @@ const HookForm = () => {
     const styleform={
         maxWidth: "500px",
         margin: 'auto',
-        marginTop: '5%',
-        backgroundColor:'var(--color1)',
+        paddingTop: '1%',
+        //backgroundColor:'var(--color1)',
         padding:'1%',
         borderRadius:'5px'
     };
@@ -85,54 +87,56 @@ const HookForm = () => {
     }
 
     return (
-        <div className="Hookform" style ={styleform}>
+        <div class="container">
+            <div  className="Hookform formulario" style ={styleform}>
 
-                        <Form className="text-white my-4" onSubmit={(e)=>onSubmitForm(e)}>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Control 
-                                    value={stateForm.nombre} 
-                                    type="text" 
-                                    placeholder="Nombre" 
-                                    name="nombre"
-                                    onChange={(e)=>onHandleChange(e)}
-                                    />
-                                {error.nombre && <p> {error.nombre} </p>}
-                            </Form.Group>
-                            
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Control 
-                                            value={stateForm.email}
-                                            type="email"
-                                            name="email"
-                                            placeholder="Email" 
-                                            onChange={(e)=>onHandleChange(e)}
-                                            />
-                                {error.email && <p> {error.email} </p>}
-                            </Form.Group>
+                            <Form className="text-white my-4 campo" onSubmit={(e)=>onSubmitForm(e)}>
+                                <h4 class="mb-5">Completa el Siguiente registro:</h4>
+                                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                    <Form.Control 
+                                        value={stateForm.nombre} 
+                                        type="text" 
+                                        placeholder="Nombre" 
+                                        name="nombre"
+                                        onChange={(e)=>onHandleChange(e)}
+                                        />
+                                    {error.nombre && <p> {error.nombre} </p>}
+                                </Form.Group>
                                 
-                                
-                            
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>Mensaje</Form.Label>
-                                <Form.Control 
-                                    value={stateForm.mensaje} 
-                                    as="textarea" 
-                                    rows={3} 
-                                    placeholder="Mensaje"
-                                    name="mensaje"
-                                    onChange={(e)=>onHandleChange(e)}
-                                    />
-                                {error.mensaje && <p> {error.mensaje} </p>}
-                            </Form.Group>
-                                
-                            <Button variant="primary" type="submit">
-                                Enviar
-                            </Button>
-                            <NavLink style={{marginLeft:'5px'}} variant="success" exact to="/home" ><div className="btn btn-success">Cancelar</div></NavLink>
+                                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                    <Form.Control 
+                                                value={stateForm.email}
+                                                type="email"
+                                                name="email"
+                                                placeholder="Email" 
+                                                onChange={(e)=>onHandleChange(e)}
+                                                />
+                                    {error.email && <p> {error.email} </p>}
+                                </Form.Group>
+                                    
+                                                
+                                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                    <Form.Label>Mensaje</Form.Label>
+                                    <Form.Control 
+                                        value={stateForm.mensaje} 
+                                        as="textarea" 
+                                        rows={3} 
+                                        placeholder="Mensaje"
+                                        name="mensaje"
+                                        onChange={(e)=>onHandleChange(e)}
+                                        />
+                                    {error.mensaje && <p> {error.mensaje} </p>}
+                                </Form.Group>
+                                    
+                                <Button variant="primary" type="submit">
+                                    Enviar
+                                </Button>
+                                <NavLink style={{marginLeft:'5px'}} variant="success" exact to="/home" ><div className="btn btn-success">Cancelar</div></NavLink>
 
-                        </Form>
-               
-        </div >
+                            </Form>
+                
+            </div >
+        </div>
     );
 }
  

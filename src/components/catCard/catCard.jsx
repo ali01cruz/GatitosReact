@@ -30,7 +30,7 @@ export default function CatCard (props){
                             variant="top" src={img.url?img.url:imgpordefect} alt='Imagen no disponible'/> }
                             
                             <Card.Body>
-                                <Button variant="primary">{props.name}</Button>
+                                <Button className="nombre" variant="primary">{props.name}</Button>
                             </Card.Body>
                         </Card>             
                        

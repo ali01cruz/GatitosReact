@@ -1,6 +1,9 @@
 .sideBar {
     width: 100vw;
     box-sizing: border-box;
+    padding-right: 2px;
+    padding-left: 2px;
+    
    
 }
 .buscador{
@@ -13,9 +16,11 @@
  
     width: 200px;
     height: 100%;
-    background: #4b4276;
+    background: #726a77;
 }
-
+ul{
+    margin: 0;
+}
 .buscador .sideBar ul li{
     padding: 15px;
     border-bottom: 1px solid rgba(0,0,0,0.05);
