@@ -11,7 +11,7 @@ import sil from '../../img/silvanafuentes.png';
 export default function About(){
     const mystyleCard={
         marginLeft: "24px",
-        width: '18rem'
+        width: '18rem',
     };
     const mystyleisil = {
         maxWidth: '16.4rem',
@@ -21,8 +21,8 @@ export default function About(){
         
       };
     return (    
-        <div>
-            <p className="my-5">
+        <div class="container">
+            <p className="my-2">
                 <span>
                 @Echo por Cruz Ali Emanuel  y Silvana Fuentes
                 </span>

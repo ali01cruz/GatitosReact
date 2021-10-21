@@ -17,14 +17,12 @@
  */
 
 body {
-  text-shadow: 0 .0rem .1rem rgba(39, 6, 49, 0.5);
+  
   box-shadow: inset 0 0 22rem rgba(88, 7, 110, 0.5);
-
 }
 
 .cover-container {
   max-width: 42em;
-  
 }
 
 
@@ -37,7 +35,7 @@ body {
   font-weight: 700;
   color: rgba(255, 255, 255, .5);
   background-color: transparent;
-  border-bottom: .25rem solid transparent;
+  border-bottom: .15rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
@@ -55,26 +53,21 @@ body {
 }
 
 .fondo{
-    
     background-image: url('../../img/gatos5.png');
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
-  
 }
 .opacidad {
     opacity: .8;
     float: left;
-   
     color: #fff;
     text-align: center;
     background-color: rgb(49, 9, 68);
-   position: absolute;
-   left: 20px;
-   right: 20px;
-   top: 60%;
-    
-  
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 60%;
   }
 
   .icono{

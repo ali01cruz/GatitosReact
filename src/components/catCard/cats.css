@@ -20,3 +20,34 @@ p{
 .card{
     display: block;
 }
+
+.nombre{
+    width: 80%;
+}
+
+.texto{
+    color: rgb(88, 26, 138);
+}
+.texto p{
+    color: rgb(10, 10, 10);
+}
+.texto .link{
+    text-decoration: none;
+    color: indigo;
+}
+.texto .link:hover{
+    text-decoration: none;
+    color: rgb(230, 223, 235);
+    background-color: rgb(156, 99, 197);
+}
+
+.volver{
+    background-color: rgb(102, 43, 158);
+    border-color: rgb(178, 126, 202);
+    color: white;
+    background: rgb(97, 8, 124);
+}
+.volver:hover{
+  background: rgb(117, 49, 182);
+  border-color: darkgray;
+}

@@ -1,0 +1,45 @@
+
+
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: .8;
+    float: left;
+    color: #fff;
+    text-align: center;
+    background-color: rgb(49, 9, 68);
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    
+}
+.campo{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+    color: rgb(192, 189, 189);
+  
+}
+@media screen and (max-width: 750px){
+    .formulario{
+       
+        display: flex;
+       
+        justify-content: flex-start;
+        min-height: auto;
+    
+        left: 20px;
+        right: 20px;
+        
+    }
+    body{
+        margin-top: 0;
+    }
+    
+
+  }
+  

@@ -1,5 +1,6 @@
 import React from "react";
 import "./sideBar.css";
+import { ButtonGroup ,Button } from "react-bootstrap"
 
 import Xinteligencia from "../filtros/xinteligencia";
 
@@ -9,12 +10,19 @@ export default function SideBar (){
     return(
         <div className="buscador text-light">
             <div className="sideBar">
-                <h3>SideBar</h3>
+           
                 <ul>
-                    <li>orden</li>
-                    <li> </li>
-                    <li>selector x raza</li>
                     <li>
+                    <br />
+                    Orden:
+                        <ButtonGroup vertical>
+                            <Button>Ascendente</Button>
+                            <Button>Descendente</Button>
+                        </ButtonGroup>
+                    </li>
+                   
+                    <li> </li>
+                    <li>Nivel de Inteligencia:
                         <Xinteligencia/>
                     </li>
                 </ul>

@@ -1,17 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './footer.css';
+import icono from '../../img/gato.png';
 
 
 export default function Footer(){
 
     return(
         <div >
-            <footer className="text-white py-4 bg-dark">
+            <footer className="text-white py-2 bg-dark">
                 <div className="container">
                     <nav className="row">
                         <Link to='/' className="col-12 col-md-3 d-flex aling-center justify-content-center">
-                                   LOGO
+                        <img src={icono} alt="Gatos" style={{width:'50px', height:'50px'}} />
                         </Link>
                         <ul className="col-12 col-md-3 list-unstyled">
                             <li className="font-weight-bold mb-2">Cruz Ali Emanuel</li>
@@ -28,7 +29,7 @@ export default function Footer(){
                             </li>
                         </ul>
                         <ul className="col-12 col-md-3 list-unstyled">
-                            <Link to='/' className="">
+                            <Link to='/form' className="">
                                     Contacto
                             </Link>
                         </ul>

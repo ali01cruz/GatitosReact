@@ -36,11 +36,12 @@ function App() {
       <Route exact path="/home">
         <NavbarComp/>
         <Home/>
-   
+        <Footer/>
       </Route>
       
       <Route exact path="/form">
         <HookForm/>
+        <Footer/>
       </Route>
       
       <Switch>
@@ -53,8 +54,9 @@ function App() {
       </Switch>
 
       <Route path="/about">
-      <NavbarComp/>
+          <NavbarComp/>
            <About/>
+           <Footer/>
      </Route>
 
     

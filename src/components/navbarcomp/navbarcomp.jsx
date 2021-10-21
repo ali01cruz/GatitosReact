@@ -8,6 +8,9 @@ import { FormControl,Form ,Button } from "react-bootstrap"
 import { useState } from "react";
 import { BuscarGato } from "../../actions/actions";
 import { connect } from "react-redux";
+import icono from '../../img/gato.png';
+import './navbar.css'
+
 function NavbarComp({ BuscarGato }){
     const [valorBuscar,setValorBuscar] = useState('');
     //siempre crear un set por que sino no funciona
@@ -19,26 +22,34 @@ function NavbarComp({ BuscarGato }){
 
     return (    
         <Navbar collapseOnSelect expand="xxl" bg="dark" variant="dark">
-            <Container>
-                <NavLink exact to="/" activeClassName="active"> <Navbar.Brand >gato</Navbar.Brand></NavLink>
+            <Container class="container mx-5">
+                <NavLink exact to="/" activeClassName="active"> 
+                    <Navbar.Brand >
+                        <img src={icono} alt="Gatos" style={{width:'60px', border:'#7A2B95 1px solid', borderRadius:'20px'}} />
+                    </Navbar.Brand>
+                </NavLink>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav>
-                        <NavLink exact to="/home" activeClassName="active" ><div className="boton">Home</div></NavLink>
+                <Navbar.Collapse id="responsive-navbar-nav" class=" d-flex justify-content-right">
+                    <Nav class="mx-1">
+                        <NavLink exact to="/home" activeClassName="active" >
+                            <Button className="busc" >Home</Button>{' '}
+                        </NavLink>
                     </Nav>
-                    <Nav>
-                        <NavLink exact to="/about" activeClassName="active" ><div className="boton">About</div></NavLink>
+                    <Nav class="mx-5">
+                        <NavLink exact to="/about" activeClassName="active" >
+                            <Button className="busc">About</Button>{' '}
+                        </NavLink>
                     </Nav>
                     <Form className="d-flex">
                         <FormControl
                         type="search"
-                        placeholder="Search"
+                        placeholder="Ingrese su búsqueda"
                         className="me-2"
                         aria-label="Search"
                         value={valorBuscar} 
                         onChange={(e)=>setValorBuscar(e.target.value)}
                         />
-                        <Button variant="outline-success" onClick={()=>onSubmitForm()}>Search</Button>
+                        <Button className="busc" variant="outline-success" onClick={()=>onSubmitForm()}>Buscar</Button>
                     </Form>
 
                 </Navbar.Collapse>
