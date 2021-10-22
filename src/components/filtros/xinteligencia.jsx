@@ -12,7 +12,7 @@ function Xinteligencia ({ filterBy ,addFiltro}){
 
     return(
             <div className="inte">
-                <select  onChange={(event) => modificarChar(event.target.value)} >
+                <select style={{ backgroundColor:"rgb(102, 43, 158)"}} onChange={(event) => modificarChar(event.target.value)} >
                     <option selected>Inteligence</option>
                         {Inteligence.map ( (raz) => (
                             <option value={raz} key={raz}>

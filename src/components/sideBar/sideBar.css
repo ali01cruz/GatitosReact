@@ -29,3 +29,17 @@ ul{
     text-decoration: none;
     
 }
+
+.todos{
+    background-color: rgba(102, 43, 158, 0.356);
+    border-color: rgb(178, 126, 202);
+    color: white;
+    background: rgba(97, 8, 124, 0.472);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.todos:hover{
+  background: rgba(118, 49, 182, 0.377);
+  border-color: darkgray;
+}

@@ -1,12 +1,17 @@
 import React from "react";
 import "./sideBar.css";
 
-
+import { getGatos } from '../../actions/actions'
+import { connect } from 'react-redux'
 import Xinteligencia from "../filtros/xinteligencia";
-import Xorden from "../filtros/orden";
-function SideBar (){
-    
 
+function SideBar ({getGatos}){
+    
+    function handleClick(e){
+        e.preventDefault();
+        getGatos();
+       // console.log(dogies)
+    }
     return(
         <div className="buscador text-light">
             <div className="sideBar">
@@ -16,9 +21,11 @@ function SideBar (){
                     <br />
                   
                     </li>
-                   
+                    <button className="todos" onClick={e=> {handleClick(e)}}>
+                        All Gatos
+                    </button>
                     <li> </li>
-                    <li>Nivel de Inteligencia:
+                    <li className="todos" >Nivel de Inteligencia:
                         <Xinteligencia/>
                     </li>
                 </ul>
@@ -27,4 +34,4 @@ function SideBar (){
     );
 
 }
-export default SideBar
+export default connect(null,{getGatos })(SideBar)
