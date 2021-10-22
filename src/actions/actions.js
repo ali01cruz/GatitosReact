@@ -44,3 +44,19 @@ export const BuscarGato = (name) => {
     });
   };
 };
+
+export const sort = (type) => {
+  return {
+    type:"SORT",
+    payload:type 
+  };
+};
+
+export const Ordenar= (valor) => {
+  return {
+    type: "ORDENAR",
+    payload: {
+      valor,
+    },
+  };
+};

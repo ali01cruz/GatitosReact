@@ -1,7 +1,8 @@
 import { filter } from "../controllers/filtracion";
+import { ordenx } from "../controllers/ordenacontro";
 
 const initialState = {
-  palabra: "",
+  palabra: [],
   datos: [],
   datosfiltrados:[],
 };
@@ -17,7 +18,8 @@ const rootReducer = (state = initialState, action) => {
         return {
           ...state,
           datos: action.payload,
-          datosfiltrados: action.payload,
+          datosfiltrados:action.payload,
+
         }
     case "FILTER":
           return {
@@ -33,6 +35,17 @@ const rootReducer = (state = initialState, action) => {
               ...state,
               datosfiltrados: action.payload,
             };
+    
+    case "ORDENAR":
+      return {
+        ...state,
+        datosfiltrados: ordenx(
+          state.datos,
+          action.payload.valor
+        ),
+      }
+      
+      
     default:
       return state;
   }

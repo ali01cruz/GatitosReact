@@ -1,10 +1,10 @@
 import React from "react";
 import "./sideBar.css";
-import { ButtonGroup ,Button } from "react-bootstrap"
+
 
 import Xinteligencia from "../filtros/xinteligencia";
-
-export default function SideBar (){
+import Xorden from "../filtros/orden";
+function SideBar (){
     
 
     return(
@@ -14,11 +14,7 @@ export default function SideBar (){
                 <ul>
                     <li>
                     <br />
-                    Orden:
-                        <ButtonGroup vertical>
-                            <Button>Ascendente</Button>
-                            <Button>Descendente</Button>
-                        </ButtonGroup>
+                  
                     </li>
                    
                     <li> </li>
@@ -31,3 +27,4 @@ export default function SideBar (){
     );
 
 }
+export default SideBar
