@@ -54,7 +54,6 @@ function App() {
       </Switch>
 
       <Route path="/about">
-          <NavbarComp/>
            <About/>
            <Footer/>
      </Route>

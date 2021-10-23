@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './footer.css';
 import icono from '../../img/gato.png';
+import icono1 from '../../img/contacto2.png';
 
 
 export default function Footer(){
@@ -11,7 +12,7 @@ export default function Footer(){
             <footer className="text-white py-2 bg-dark">
                 <div className="container">
                     <nav className="row">
-                        <Link to='/' className="col-12 col-md-3 d-flex aling-center justify-content-center">
+                        <Link to='/Home' className="col-12 col-md-3 d-flex aling-center justify-content-center">
                         <img src={icono} alt="Gatos" style={{width:'50px', height:'50px'}} />
                         </Link>
                         <ul className="col-12 col-md-3 list-unstyled">
@@ -30,7 +31,8 @@ export default function Footer(){
                         </ul>
                         <ul className="col-12 col-md-3 list-unstyled">
                             <Link to='/form' className="contacto">
-                                    Contacto
+                                    Contacto <br/>
+                                    <img src={icono1} alt="Gatos" style={{width:'35px', height:'35px'}} />
                             </Link>
                         </ul>
                         
