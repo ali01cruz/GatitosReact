@@ -29,7 +29,7 @@ export default function Footer(){
                             </li>
                         </ul>
                         <ul className="col-12 col-md-3 list-unstyled">
-                            <Link to='/form' className="">
+                            <Link to='/form' className="contacto">
                                     Contacto
                             </Link>
                         </ul>

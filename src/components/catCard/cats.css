@@ -54,11 +54,12 @@ p{
 .buscwwww{
     background-color: rgb(102, 43, 158);
     border-color: rgb(178, 126, 202);
-    padding: 5px;
+    padding: 2px;
     border-radius: 5px;
-    margin: 12px;
+    margin: 2px;
     color: white;
     background: rgb(97, 8, 124);
+    width: 66%;
 }
 .buscwwww:hover{
   background: rgb(117, 49, 182);
@@ -77,7 +78,7 @@ p{
 	border-radius: 5px; /* Borde del boton */
 	letter-spacing: 2px; /* Espacio entre letras */
 	background-color: #e91e6248; /* Color de fondo */
-	padding: 18px 30px; /* Relleno del boton */
+	padding: 3px 6px; /* Relleno del boton */
 	position: fixed;
 
 	right: 100px;

@@ -22,8 +22,8 @@ function Cats ({datosfiltrados}){
     return (
         <>
           <div className="btn-flotante ">
-            <button className="buscwwww"  onClick={() => modificarChar(false)}> desendente</button>
-            <button className="buscwwww"  onClick={() => modificarChar(true)}> asendente</button>
+            <button className="buscwwww"  onClick={() => modificarChar(false)}> DESC</button>
+            <button className="buscwwww"  onClick={() => modificarChar(true)}> ASC</button>
           </div>
           {band?(<div className="lista">
                 {datosfiltrados.map((element)=>(
