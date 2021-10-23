@@ -21,7 +21,7 @@ function NavbarComp({ BuscarGato }){
     }
 
     return (    
-        <Navbar collapseOnSelect expand="xxl" bg="dark" variant="dark">
+        <Navbar expand="lg" collapseOnSelect expand="xxl" bg="dark" variant="dark">
             <Container class="container mx-5">
                 <NavLink exact to="/" activeClassName="active"> 
                     <Navbar.Brand >

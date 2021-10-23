@@ -10,6 +10,9 @@ footer{
     
     
   }
+  .contacto{
+    text-decoration: none;
+  }
   @media screen and (max-width: 750px){
     footer{
         margin-top: 40px;

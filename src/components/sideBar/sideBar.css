@@ -15,8 +15,8 @@
 .buscador .sideBar{
  
     width: 200px;
-    height: 100%;
-    background: #726a77;
+    
+    
 }
 ul{
     margin: 0;
@@ -37,9 +37,14 @@ ul{
     background: rgba(97, 8, 124, 0.472);
     padding: 10px;
     border-radius: 10px;
-    margin: 5px;
+    margin: 15px;
 }
 .todos:hover{
   background: rgba(118, 49, 182, 0.377);
   border-color: darkgray;
 }
+
+
+
+  
+

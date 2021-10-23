@@ -13,7 +13,7 @@ function SideBar ({getGatos}){
        // console.log(dogies)
     }
     return(
-        <div className="buscador text-light">
+        <div className="buscador text-light ">
             <div className="sideBar">
            
                 <ul>
