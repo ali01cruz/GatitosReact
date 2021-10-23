@@ -1,10 +1,13 @@
 import { filter } from "../controllers/filtracion";
 import { ordenx } from "../controllers/ordenacontro";
+import { Cargar20 } from "../controllers/caraga20";
+
 
 const initialState = {
   palabra: [],
   datos: [],
   datosfiltrados:[],
+
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -18,7 +21,7 @@ const rootReducer = (state = initialState, action) => {
         return {
           ...state,
           datos: action.payload,
-          datosfiltrados:action.payload,
+          datosfiltrados:Cargar20(action.payload)
 
         }
     case "FILTER":
@@ -44,7 +47,12 @@ const rootReducer = (state = initialState, action) => {
           action.payload.valor
         ),
       }
-      
+      case "CARGAR100":    
+        return {
+          ...state,
+          datosfiltrados:state.datos,
+
+        }
       
     default:
       return state;

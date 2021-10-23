@@ -60,3 +60,9 @@ export const Ordenar= (valor) => {
     },
   };
 };
+
+export const CargarCien = () => {
+  return {
+    type:"CARGAR100",
+  };
+};

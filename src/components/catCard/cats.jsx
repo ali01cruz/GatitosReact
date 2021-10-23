@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './cats.css';
 import CatCard from "./catCard";
 import { connect } from "react-redux"
 import 'bootstrap/dist/css/bootstrap.min.css'
-function Cats ({datosfiltrados}){
+import { getGatos,CargarCien } from '../../actions/actions'
+
+function Cats ({datosfiltrados,getGatos,CargarCien}){
    //cat es el listado de las cosas filtradas
-   const [band,setband]=useState(true)
    
+   
+   const [band,setband]=useState(true)
+   const [bancargar,setbancargar] = useState(true);
+   function cargar101(es){
+      if (es){
+        CargarCien();
+        setbancargar(false)
+      }
+      if(!es){
+        getGatos();
+        setbancargar(true)
+      }
+   }
+
+
    function modificarChar(estado){
     if (estado){
       datosfiltrados= datosfiltrados.sort((a, b) => a.name.localeCompare(b.name))
@@ -37,7 +53,10 @@ function Cats ({datosfiltrados}){
                             /> 
                     </div>
                 )
+                
               )}
+              {bancargar?<button className="buscwwww" onClick={() => cargar101(true)} > MAS</button>:<button className="buscwwww" onClick={() => cargar101(false)} > MENOS</button>}
+              
           </div>):(
             <div className="lista">
                 {datosfiltrados.map((element)=>(
@@ -52,9 +71,11 @@ function Cats ({datosfiltrados}){
                     </div>
                 )
               )}
+              
           </div>
-
+            
           )}
+          
         </>
     );
 
@@ -62,8 +83,9 @@ function Cats ({datosfiltrados}){
 }
 const mapStateToProps = state =>{
   return {
-    datosfiltrados:state.datosfiltrados
+    datosfiltrados:state.datosfiltrados,
+   
   }
 }
 
-export default connect(mapStateToProps)(Cats)
+export default connect(mapStateToProps,{getGatos,CargarCien})(Cats)
