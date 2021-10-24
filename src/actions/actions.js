@@ -60,3 +60,12 @@ export const Ordenar= (valor) => {
     },
   };
 };
+
+export const cargarcantidad= (N) => {
+  return {
+    type: "CargarCantidad",
+    payload: {
+      N,
+    },
+  };
+};

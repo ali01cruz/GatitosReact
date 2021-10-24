@@ -4,7 +4,7 @@ import "./sideBar.css";
 import { getGatos } from '../../actions/actions'
 import { connect } from 'react-redux'
 import Xinteligencia from "../filtros/xinteligencia";
-
+import XCantidad from "../filtros/cantidad";
 function SideBar ({getGatos}){
     
     function handleClick(e){
@@ -22,11 +22,15 @@ function SideBar ({getGatos}){
                   
                     </li>
                     <button className="todos" onClick={e=> {handleClick(e)}}>
-                        All Gatos
+                        All Cats
                     </button>
                     <li> </li>
-                    <li className="todos" >Nivel de Inteligencia:
+                    <li className="todos" >intelligence level:
                         <Xinteligencia/>
+                    </li>
+
+                    <li className="todos" >card amount:
+                        <XCantidad/>
                     </li>
                 </ul>
             </div>

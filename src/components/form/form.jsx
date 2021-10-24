@@ -5,6 +5,8 @@ import { Form ,Button} from 'react-bootstrap'
 import {NavLink } from "react-router-dom";
 import './dd.css';
 import '../footer/footer.css';
+import Swal from "sweetalert2";
+import { useHistory } from "react-router-dom";
 
 export function validacion(input){
 
@@ -32,7 +34,7 @@ export function validacion(input){
     return errors;
 }
 const HookForm = () => {
-
+    const history = useHistory();
     const styleform={
         maxWidth: "500px",
         margin: 'auto',
@@ -52,17 +54,19 @@ const HookForm = () => {
         //este prevente defaul es para que no se envien directamente por el metodo get 
         //cuando se aprete el boton
         e.preventDefault();
-        alert(`
-               el coreo es : ${stateForm.email}
-               el nombre es : ${stateForm.nombre}
-               el mensaje es : ${stateForm.mensaje}
-        `)
+        Swal.fire({
+            icon: "success",
+            title: "Message sent",
+            showConfirmButton: false,
+            timer: 1000,
+          });
         ///limpiando formulario
         setStateForm({
             email:"",
             nombre:"",
             mensaje:"",
         })
+        history.push("/home");
     }
     const[error,setError] = useState({
         email: "el email es requerido",
@@ -128,7 +132,14 @@ const HookForm = () => {
                                     {error.mensaje && <p> {error.mensaje} </p>}
                                 </Form.Group>
                                     
-                                <Button variant="primary" type="submit">
+                                <Button 
+                                    variant="primary" 
+                                    type="submit"
+                                    style={{ color: "white" }}
+                                    disabled={
+                                        error.email || error.nombre || error.mensaje ? true : false
+                                    }
+                                    >
                                     Enviar
                                 </Button>
                                 <NavLink style={{marginLeft:'5px'}} variant="success" exact to="/home" ><div className="btn btn-success">Cancelar</div></NavLink>
