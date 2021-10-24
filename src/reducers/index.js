@@ -1,6 +1,6 @@
 import { filter } from "../controllers/filtracion";
 import { ordenx } from "../controllers/ordenacontro";
-
+import { CargarCantidad } from "../controllers/cantidad";
 const initialState = {
   palabra: [],
   datos: [],
@@ -40,10 +40,18 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         datosfiltrados: ordenx(
-          state.datos,
+          state.datosfiltrados,
           action.payload.valor
         ),
-      }
+      };
+      case "CargarCantidad":
+      return {
+        ...state,
+        datosfiltrados: CargarCantidad(
+          state.datos,
+          action.payload.N
+        ),
+      };
       
       
     default:
