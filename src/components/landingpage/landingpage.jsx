@@ -29,7 +29,7 @@ export default function Landing(){
                 </header>
 
                 <main class="px-3 text-light" className="opacidad">
-                    <h1>Landing Page</h1>
+                    <h1>Gatehook</h1>
                     <p class=" text-light lead">Si estás pensando en adoptar un gato pero tienes dudas sobre su comportamiento o incluso si ya compartes tu vida con un felino pero quieres saber más sobre los comportamientos más comunes en esta especie, esta página web es para ti.</p>
                     <p class="text-light lead">
                         <NavLink  to="/home">
