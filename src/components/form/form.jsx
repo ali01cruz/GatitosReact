@@ -91,7 +91,8 @@ const HookForm = () => {
     }
 
     return (
-        <div class="container">
+        <div class="my-2">
+        <div class="container mt-1">
             <div  className="Hookform formulario" style ={styleform}>
 
                             <Form className="text-white my-4 campo" onSubmit={(e)=>onSubmitForm(e)}>
@@ -147,7 +148,7 @@ const HookForm = () => {
                             </Form>
                 
             </div >
-        </div>
+        </div></div>
     );
 }
  

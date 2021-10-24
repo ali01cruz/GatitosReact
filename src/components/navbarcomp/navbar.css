@@ -3,12 +3,16 @@ body{
   margin-top: 0px;
 }
 .busc{
+  margin: 3px;
     background-color: rgb(102, 43, 158);
     border-color: rgb(178, 126, 202);
     color: white;
-    background: rgb(97, 8, 124);
+    background: rgb(82 48 98);
 }
 .busc:hover{
-  background: rgb(117, 49, 182);
+  background: rgb(125, 75, 146);
   border-color: darkgray;
+}
+.img-filtro{
+  filter: brightness(150%);
 }

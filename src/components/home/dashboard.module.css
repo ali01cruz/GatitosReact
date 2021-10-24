@@ -1,7 +1,8 @@
 .containerDash{
     display: flex;
     background-color: #c6c82d11;
-    height: 89vh;
+    height: 85vh;
+    margin-bottom: -90px;
     width: 100vw;
     box-sizing: content-box;
 

@@ -3,7 +3,7 @@ body{
     background: #f0f0f0;
   }
 footer{
-    margin-top: 30px;
+    margin-top: 5px;
     width: 100%;
     position:absolute;
     bottom: 0; 
@@ -13,9 +13,15 @@ footer{
   .contacto{
     text-decoration: none;
   }
+  .main-footer{
+    padding-top: 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100;
+  }
   @media screen and (max-width: 750px){
     footer{
-        margin-top: 40px;
+        margin-top: 20px;
         width: 100%;
         position:sticky;
         bottom: 0; 
