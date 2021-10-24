@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import './footer.css';
 import icono from '../../img/gato.png';
 import icono1 from '../../img/contacto2.png';
+import ModalFooter from 'react-bootstrap/ModalFooter'
 
 
 export default function Footer(){
 
     return(
         <div >
-            <footer className="text-white py-2 bg-dark">
+            <footer className="main-footer text-white py-2 bg-dark">
                 <div className="container">
                     <nav className="row">
                         <Link to='/Home' className="col-12 col-md-3 d-flex aling-center justify-content-center">

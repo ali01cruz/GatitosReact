@@ -6,11 +6,11 @@
     justify-content: center;
     
     opacity: .8;
-    float: left;
+    float: center;
     color: #fff;
     text-align: center;
     background-color: rgb(49, 9, 68);
-    position: absolute;
+    align-items: center;
     left: 20px;
     right: 20px;
     
@@ -25,21 +25,11 @@ p{
   
 }
 @media screen and (max-width: 750px){
-    .formulario{
-       
-        display: flex;
-       
-        justify-content: flex-start;
-        min-height: auto;
-    
+    .formulario{  
         left: 20px;
         right: 20px;
         
     }
-    body{
-        margin-top: 0;
-    }
-    
 
   }
   

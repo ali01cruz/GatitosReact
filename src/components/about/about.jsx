@@ -21,7 +21,7 @@ export default function About(){
         
       };
     return (    
-        <div class="container">
+        <div class="container mt-2">
             <p className="my-2">
                 <span>
                 @Echo por Cruz Ali Emanuel  y Silvana Fuentes
