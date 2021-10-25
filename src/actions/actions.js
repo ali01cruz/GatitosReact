@@ -69,3 +69,10 @@ export const cargarcantidad= (N) => {
     },
   };
 };
+
+export const addFilxInte = palabra => {
+  return {
+    type: "addFilxInte",
+    payload:palabra
+  }
+}; 
