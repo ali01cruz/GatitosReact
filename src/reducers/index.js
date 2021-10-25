@@ -3,7 +3,7 @@ import { ordenx } from "../controllers/ordenacontro";
 import { CargarCantidad } from "../controllers/cantidad";
 const initialState = {
   palabra:false,
-  filtroXespe:'',
+  filtroXespe:0,
   datos: [],
   datosfiltrados:[],
   datosrespaldo:[],
@@ -48,17 +48,45 @@ const rootReducer = (state = initialState, action) => {
         ),
       };
       case "CargarCantidad":
-      return {
-        ...state,
-        datosfiltrados: CargarCantidad(
-          state.datos,
-          action.payload.N
-        ),
-        datosrespaldo: CargarCantidad(
-          state.datos,
-          action.payload.N
-        ),
-      };
+
+      if ("345".includes(parseInt(state.filtroXespe))){
+        return {
+          ...state,
+          datosfiltrados: filter(CargarCantidad(
+            state.datos,
+            action.payload.N
+          ),parseInt(state.filtroXespe),"intelligence"),
+          datosrespaldo: CargarCantidad(
+            state.datos,
+            action.payload.N
+          ),
+        };
+
+      }else{
+
+        return {
+          ...state,
+          datosfiltrados: CargarCantidad(
+            state.datos,
+            action.payload.N
+          ),
+          datosrespaldo: CargarCantidad(
+            state.datos,
+            action.payload.N
+          ),
+        };
+      }
+
+      
+
+
+
+
+      case "addFilxInte":
+        return {
+          ...state,
+            filtroXespe:action.payload,
+        };
       
       
     default:

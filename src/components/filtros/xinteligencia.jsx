@@ -1,11 +1,12 @@
 import React from "react";
-import { filterBy ,addFiltro} from "../../actions/actions";
+import { filterBy ,addFilxInte} from "../../actions/actions";
 import { connect } from "react-redux";
-function Xinteligencia ({ palabra,filterBy }){
+function Xinteligencia ({addFilxInte, palabra,filterBy }){
     
     const Inteligence =[3,4,5]
     function modificarChar(e){
         //props.setValor(e)
+        addFilxInte(e)
         filterBy(e,"intelligence")
     }
    
@@ -46,8 +47,9 @@ function Xinteligencia ({ palabra,filterBy }){
 
 const mapStateToProps = state =>{
     return {
-        palabra:state.palabra
+        palabra:state.palabra,
+        
     }
   }
   
-export default connect(mapStateToProps,{filterBy})(Xinteligencia)
+export default connect(mapStateToProps,{addFilxInte,filterBy})(Xinteligencia)
