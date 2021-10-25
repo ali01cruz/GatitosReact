@@ -25,7 +25,6 @@ function App() {
   let location = useLocation();
 
   useEffect(() => {
-    console.log(location);
   }, [location]);
 
   
@@ -36,18 +35,20 @@ function App() {
     
         <Switch>
              
-          <Route exact path="/home/cats/:name/:url">
+        <Route exact path="/home/cats/:name/:url">
+              <NavBar/>
               <CatCardDetails/>
-          </Route>
+            </Route>
 
-          <Route exact path="/home/cats">
+            <Route exact path="/home/cats">
               <Cats/>
-          </Route>
+            </Route>
 
           <Route exact path="/">
               <Landing />
           </Route>
           
+        
           <Route exact path="/home">
             <NavbarComp/>
             <Home/>
@@ -62,11 +63,12 @@ function App() {
             <NavBar/>
             <About/>
           </Route>
-          
+
         </Switch>
       </div>
-      { location.pathname === '/' ? <></> : <Footer/> }
+      { location.pathname === '/' ? <></> : <Footer /> }
     </div>
+
 
   );
 }

@@ -40,32 +40,32 @@ export default function CatCardDetails(){
   console.log(`https://api.thecatapi.com/v1/images/${url}`)
 
     return(
-        <div className=''>
+        <div >
                           
               {cat.map((ele)=>(
                
-               <div key ={ele.id}>  
+               <div className='container' key ={ele.id}>  
 
 
-                <Card className='catCard' >
-                    <Card.Header as="h5">Origen: <b>{ele.origin}</b></Card.Header>
+                <Card className='catCard_2' >
+                    <Card.Header as="h5">Origin: <b>{ele.origin}</b></Card.Header>
                     <Card.Body className="texto">
                         <Card.Title> <b>{ele.name}</b></Card.Title>
-                        <Card.Img variant="top" src={img.url}  style={{ width: '20rem',display:'block',margin:'auto'}}/>
-                        <Card.Text>
-                            <p>Temperamento: <b>{ele.temperament}</b></p>
-                            <p>Descripción: {ele.description}</p> 
-                            <p>Adaptabilidad:<b> {ele.adaptability}</b></p>
-                            <p>Nivel de Afecto: <b>{ele.affection_level}</b></p>
-                            <p>Nivel de Energia: <b>{ele.energy_level}</b></p>
-                            <p>Mas información en:</p>
+                        <Card.Img className="imagen" variant="top" src={img.url} />
+                        <Card.Text className="contenido">
+                            <p>Temperament: <b>{ele.temperament}</b></p>
+                            <p>Description: {ele.description}</p> 
+                            <p>Adaptability:<b> {ele.adaptability}</b></p>
+                            <p>Affection_Level: <b>{ele.affection_level}</b></p>
+                            <p>Energy_level: <b>{ele.energy_level}</b></p>
+                            <p>More information in:</p>
                             <Card.Link  className="link" href={ele.cfa_url} target="_blank">The Cat Fanciers’ Association, Inc.</Card.Link>
                             <Card.Link className="link" href={ele.vetstreet_url} target="_blank"> Vetstreet</Card.Link>
                             <Card.Link className="link" href={ele.wikipedia_url} target="_blank">Wikipedia</Card.Link>
 
                         </Card.Text>
                         <NavLink to={`/home`}>
-                            <Button className="volver" variant="primary">Volver</Button>
+                            <Button className="volver" variant="primary">Back to</Button>
                         </NavLink>
                     </Card.Body>
                 </Card>

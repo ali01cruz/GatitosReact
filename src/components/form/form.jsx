@@ -69,9 +69,9 @@ const HookForm = () => {
         history.push("/home");
     }
     const[error,setError] = useState({
-        email: "el email es requerido",
-        nombre: "el nombre es requerido",
-        mensaje: "el mensaje es requerido",
+        email: "email is required",
+        nombre: "the name is required",
+        mensaje: "the message is required",
     })
     
 
@@ -96,12 +96,12 @@ const HookForm = () => {
             <div  className="Hookform formulario" style ={styleform}>
 
                             <Form className="text-white my-4 campo" onSubmit={(e)=>onSubmitForm(e)}>
-                                <h4 class="mb-5">Completa el Siguiente registro:</h4>
+                                <h4 class="mb-5">Contact:</h4>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                     <Form.Control 
                                         value={stateForm.nombre} 
                                         type="text" 
-                                        placeholder="Nombre" 
+                                        placeholder="Name" 
                                         name="nombre"
                                         onChange={(e)=>onHandleChange(e)}
                                         />
@@ -121,12 +121,12 @@ const HookForm = () => {
                                     
                                                 
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                    <Form.Label>Mensaje</Form.Label>
+                                    <Form.Label>Message</Form.Label>
                                     <Form.Control 
                                         value={stateForm.mensaje} 
                                         as="textarea" 
                                         rows={3} 
-                                        placeholder="Mensaje"
+                                        placeholder="Message"
                                         name="mensaje"
                                         onChange={(e)=>onHandleChange(e)}
                                         />
@@ -141,9 +141,9 @@ const HookForm = () => {
                                         error.email || error.nombre || error.mensaje ? true : false
                                     }
                                     >
-                                    Enviar
+                                    Send
                                 </Button>
-                                <NavLink style={{marginLeft:'5px'}} variant="success" exact to="/home" ><div className="btn btn-success">Cancelar</div></NavLink>
+                                <NavLink style={{marginLeft:'5px'}} variant="success" exact to="/home" ><div className="btn btn-success">Cancel</div></NavLink>
 
                             </Form>
                 
