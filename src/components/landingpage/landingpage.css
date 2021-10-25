@@ -65,9 +65,11 @@ body {
     text-align: center;
     background-color: rgb(49, 9, 68);
     position: absolute;
-    left: 20px;
-    right: 20px;
+    left: 100px;
+    right: 100px;
     top: 60%;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .icono{
@@ -103,8 +105,16 @@ body {
         position: absolute; 
         left: 15px;
         right: 15px;
-        top: 45%;
+        top: 30%;
          
+      }
+      .opacidad {
+        
+        left: 20px;
+        right: 20px;
+        top: 42%;
+        padding-left: 10px;
+        padding-right: 10px;
       }
 
   }

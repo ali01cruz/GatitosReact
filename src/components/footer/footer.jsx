@@ -32,7 +32,7 @@ export default function Footer(){
                         </ul>
                         <ul className="col-12 col-md-3 list-unstyled">
                             <Link to='/form' className="contacto">
-                                    Contacto <br/>
+                                    Contact <br/>
                                     <img src={icono1} alt="Gatos" style={{width:'35px', height:'35px'}} />
                             </Link>
                         </ul>

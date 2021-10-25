@@ -21,37 +21,38 @@ function NavbarComp({ BuscarGato }){
     }
 
     return (    
-        <Navbar expand="lg" collapseOnSelect expand="xxl" bg="dark" variant="dark">
-            <Container class="container mx-5">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Container>
                 <NavLink exact to="/" activeClassName="active"> 
                     <Navbar.Brand >
-                        <img src={icono} alt="Gatos" style={{width:'60px', border:'#7A2B95 1px solid', borderRadius:'20px'}} />
+                        <img src={icono} alt="Gatos" style={{width:'60px', border:'rgb(102, 43, 158) 1px solid', borderRadius:'20px',filter:'brightness(130%)'}} />
                     </Navbar.Brand>
                 </NavLink>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav" class=" d-flex justify-content-right">
-                    <Nav class="mx-1">
-                        <NavLink exact to="/home" activeClassName="active" >
-                            <Button className="busc" >Home</Button>{' '}
-                        </NavLink>
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
                     </Nav>
-                    <Nav class="mx-5">
-                        <NavLink exact to="/about" activeClassName="active" >
-                            <Button className="busc">About</Button>{' '}
-                        </NavLink>
-                    </Nav>
-                    <Form className="d-flex">
+                    <Nav>
+                    <NavLink exact to="/home" activeClassName="active" >
+                        <Button className="busc" >Home</Button>{' '}
+                    </NavLink>
+                   
+                    <NavLink exact to="/about" activeClassName="active" >
+                        <Button className="busc">About</Button>{' '}
+                    </NavLink>
+                  
+                    <Form className="d-flex" style={{background: 'grey', padding:'3px', marginLeft:'10px' }}>
                         <FormControl
                         type="search"
-                        placeholder="Ingrese su búsqueda"
+                        placeholder="Enter your search..."
                         className="me-2"
                         aria-label="Search"
                         value={valorBuscar} 
                         onChange={(e)=>setValorBuscar(e.target.value)}
                         />
-                        <Button className="busc" variant="outline-success" onClick={()=>onSubmitForm()}>Buscar</Button>
+                        <Button className="busc" variant="outline-success" onClick={()=>onSubmitForm()}>Search</Button>
                     </Form>
-
+                </Nav>
                 </Navbar.Collapse>
             </Container>
 
