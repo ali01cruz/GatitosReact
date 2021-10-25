@@ -2,9 +2,11 @@ import { filter } from "../controllers/filtracion";
 import { ordenx } from "../controllers/ordenacontro";
 import { CargarCantidad } from "../controllers/cantidad";
 const initialState = {
-  palabra: [],
+  palabra:false,
+  filtroXespe:'',
   datos: [],
   datosfiltrados:[],
+  datosrespaldo:[],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -12,20 +14,21 @@ const rootReducer = (state = initialState, action) => {
     case "AGREGAR_FILTRO":
       return {
         ...state,
-        palabra:state.palabra.concat(action.payload ), 
+        palabra:action.payload , 
       };
     case "CARGAR":    
         return {
           ...state,
           datos: action.payload,
           datosfiltrados:action.payload,
+          datosrespaldo:action.payload,
 
         }
     case "FILTER":
           return {
             ...state,
             datosfiltrados: filter(
-              state.datos,
+              state.datosrespaldo,
               action.payload.condition,
               action.payload.attribute1
             ),
@@ -48,6 +51,10 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         datosfiltrados: CargarCantidad(
+          state.datos,
+          action.payload.N
+        ),
+        datosrespaldo: CargarCantidad(
           state.datos,
           action.payload.N
         ),
