@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './cats.css';
 import CatCard from "./catCard";
 import { connect } from "react-redux"
@@ -7,6 +7,10 @@ function Cats ({datosfiltrados}){
    //cat es el listado de las cosas filtradas
    const [band,setband]=useState(true)
    
+   useEffect(() => {
+    // Actualiza el título del documento usando la API del navegador
+    setband(true)
+  },[datosfiltrados]);
    function modificarChar(estado){
     if (estado){
       datosfiltrados= datosfiltrados.sort((a, b) => a.name.localeCompare(b.name))
@@ -21,6 +25,7 @@ function Cats ({datosfiltrados}){
    
     return (
         <>
+          
           <div className="btn-flotante ">
             <button className="buscwwww"  onClick={() => modificarChar(false)}> DESC</button>
             <button className="buscwwww"  onClick={() => modificarChar(true)}> ASC</button>

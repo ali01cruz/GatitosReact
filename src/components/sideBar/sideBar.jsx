@@ -1,14 +1,15 @@
 import React from "react";
 import "./sideBar.css";
 
-import { getGatos } from '../../actions/actions'
+import { getGatos ,addFiltro} from '../../actions/actions'
 import { connect } from 'react-redux'
 import Xinteligencia from "../filtros/xinteligencia";
 import XCantidad from "../filtros/cantidad";
-function SideBar ({getGatos}){
+function SideBar ({palabra,getGatos,addFiltro}){
     
     function handleClick(e){
         e.preventDefault();
+        addFiltro(!palabra)
         getGatos();
        // console.log(dogies)
     }
@@ -38,4 +39,10 @@ function SideBar ({getGatos}){
     );
 
 }
-export default connect(null,{getGatos })(SideBar)
+
+const mapStateToProps = state =>{
+    return {
+        palabra:state.palabra
+    }
+  }
+export default connect(mapStateToProps,{getGatos,addFiltro })(SideBar)
