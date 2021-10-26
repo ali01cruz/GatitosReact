@@ -8,3 +8,9 @@
 
 }
 
+
+@media (max-width: 600px) {
+    .containerDash{
+        flex-direction: column;
+    }
+}

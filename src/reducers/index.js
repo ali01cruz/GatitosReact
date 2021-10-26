@@ -20,7 +20,10 @@ const rootReducer = (state = initialState, action) => {
         return {
           ...state,
           datos: action.payload,
-          datosfiltrados:action.payload,
+          datosfiltrados: CargarCantidad(
+            action.payload,
+            20
+          ),
           datosrespaldo:action.payload,
 
         }
@@ -37,6 +40,7 @@ const rootReducer = (state = initialState, action) => {
             return {
               ...state,
               datosfiltrados: action.payload,
+              datosrespaldo: action.payload,
             };
     
     case "ORDENAR":

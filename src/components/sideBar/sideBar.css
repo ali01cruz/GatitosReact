@@ -46,5 +46,9 @@ ul{
 
 
 
-  
 
+@media (max-width: 600px) {
+    .responsi{
+        display: flex;
+    }
+}

@@ -18,7 +18,7 @@ function SideBar ({addFilxInte,palabra,getGatos,addFiltro}){
         <div className="buscador text-light ">
             <div className="sideBar">
            
-                <ul>
+                <ul className="responsi" >
                     <li>
                     <br />
                   
