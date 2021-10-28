@@ -6,12 +6,17 @@ import { ListGroup } from "react-bootstrap"
 import { ListGroupItem } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ali from '../../img/alicruz.png';
+import go from '../../img/go.gif';
 import sil from '../../img/silvanafuentes.png';
 
 export default function About(){
     const mystyleCard={
         marginLeft: "24px",
         width: '18rem',
+        borderRadius: '30px',
+        border: '10px solid rgb(107 12 144 / 40%)',
+        paddingLeft:'10%',
+        paddingRight:'10%',
     };
     const mystyleisil = {
         maxWidth: '16.4rem',
@@ -42,7 +47,7 @@ export default function About(){
                                 </Card.Text>
                             </Card.Body>
                             <ListGroup className="list-group-flush">
-                                <ListGroupItem>soy Uriundo de Abra Pampa</ListGroupItem>
+                                <ListGroupItem>Abra Pampa</ListGroupItem>
                                 <ListGroupItem>Estudiante UNJU</ListGroupItem>
                             </ListGroup>
     
@@ -70,6 +75,8 @@ export default function About(){
                 </Row>
 
             </Container>
+
+            <img src={go} />
 
             
         </div>

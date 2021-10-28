@@ -24,7 +24,10 @@ const rootReducer = (state = initialState, action) => {
             action.payload,
             20
           ),
-          datosrespaldo:action.payload,
+          datosrespaldo:CargarCantidad(
+            action.payload,
+            20
+          ),
 
         }
     case "FILTER":
