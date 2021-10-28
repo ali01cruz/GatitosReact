@@ -3,11 +3,18 @@ import './cats.css';
 import CatCard from "./catCard";
 import { connect } from "react-redux"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Loading from "../../img/loading.gif";
+import found from "../../img/found.gif";
 function Cats ({datosfiltrados}){
    //cat es el listado de las cosas filtradas
    const [band,setband]=useState(true)
-   
+   const [loading, setLoading] = useState(false);
    useEffect(() => {
+    loadPage();
+    
+  },[]);
+   useEffect(() => {
+    
     // Actualiza el título del documento usando la API del navegador
     setband(true)
     
@@ -25,7 +32,30 @@ function Cats ({datosfiltrados}){
     setband(estado) 
     console.log(datosfiltrados);
    }
-   const texto = <h1>No considerations found</h1> 
+   const texto = (
+    <div >
+      <img className="loadinggatito" src={found} alt="loading" style={{maxWidth:"500px"}} />
+    </div>); 
+
+   useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 2500);
+    }
+  }, [loading]);
+
+  const loadPage = () => {
+    setLoading(!loading);
+    setTimeout(()=>{
+      setLoading(!loading); }, 2500)
+  }
+
+  if (loading) return (
+    <div >
+      <img className="loadinggatito" src={Loading} alt="loading" />
+    </div>);
+
     return (
         <>
           {datosfiltrados.length===0 && texto}

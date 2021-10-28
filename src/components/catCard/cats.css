@@ -127,3 +127,9 @@ p{
 	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.205);
 	transform: translateY(-7px);
 }
+.loadinggatito{
+    margin: auto;
+    border-radius: 15%;
+    border: 10px solid rgb(107, 12, 144);
+    
+}
