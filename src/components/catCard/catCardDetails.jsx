@@ -58,6 +58,7 @@ export default function CatCardDetails(){
                             <p>Adaptability:<b> {ele.adaptability}</b></p>
                             <p>Affection_Level: <b>{ele.affection_level}</b></p>
                             <p>Energy_level: <b>{ele.energy_level}</b></p>
+                            <p>Intelligence: <b>{ele.intelligence}</b></p>
                             <p>More information in:</p>
                             <Card.Link  className="link" href={ele.cfa_url} target="_blank">The Cat Fanciers’ Association, Inc.</Card.Link>
                             <Card.Link className="link" href={ele.vetstreet_url} target="_blank"> Vetstreet</Card.Link>

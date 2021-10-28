@@ -16,19 +16,19 @@ export function validacion(input){
     if (!input.email){
         errors.email= "el email es requerido"
     }else if(!/\S+@\S+\.\S+/.test(input.email)){
-        errors.email= "el campo tiene que ser un email "
+        errors.email= "enter a valid email address"
     }
 
     if (!input.nombre){
-        errors.nombre= "el nombre es requerido"
+        errors.nombre= "the name is require"
     }else if(input.nombre.length<3){
-        errors.nombre= "el nombre tiene que ser mayor  2 caracteres"
+        errors.nombre= "enter more than 2 characters"
     }
     
     if (!input.mensaje){
-        errors.mensaje= "el mensaje es requerido"
+        errors.mensaje= "the message is required"
     }else if(input.mensaje.length>256 ){
-        errors.mensaje= " el mensaje, debe contener como máximo 256 caracteres."
+        errors.mensaje= "the message must contain a maximum of 256 characters"
     }
 
     return errors;
@@ -69,7 +69,7 @@ const HookForm = () => {
         history.push("/home");
     }
     const[error,setError] = useState({
-        email: "email is required",
+        email: "the email is required",
         nombre: "the name is required",
         mensaje: "the message is required",
     })

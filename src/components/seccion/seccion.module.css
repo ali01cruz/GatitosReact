@@ -5,7 +5,8 @@
     height: 82%;
     margin: 1%;
     border-radius: 5px;
-   
+    margin-left: auto;
+    margin-right: auto;
     overflow:auto;
     align-content: center;
     justify-content: center;

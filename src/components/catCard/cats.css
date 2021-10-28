@@ -33,21 +33,6 @@ p{
     margin:'auto';
 }
 
-@media screen and (max-width: 650px){
-    .container .catCard_2{
-        position: relative;
-        width: 80%;
-       margin-left: auto;
-        margin-right: auto;    
-    }
-    .texto .imagen{
-        width: '20rem';
-        display:'block';
-        margin:'auto';
-    }
-
-  }
-
 
 .card{
     display: block;
@@ -113,7 +98,7 @@ p{
 	color: #ffffff48; /* Color del texto */
 	border-radius: 5px; /* Borde del boton */
 	letter-spacing: 2px; /* Espacio entre letras */
-	background-color: #e91e6248; /* Color de fondo */
+	background-color: #79588548; /* Color de fondo */
 	padding: 3px 6px; /* Relleno del boton */
 	position: fixed;
 
@@ -133,3 +118,24 @@ p{
     border: 10px solid rgb(107, 12, 144);
     
 }
+
+
+@media screen and (max-width: 650px){
+    .container .catCard_2{
+        position: relative;
+        width: 80%;
+       margin-left: auto;
+        margin-right: auto;    
+    }
+    .texto .imagen{
+        width: '20rem';
+        display:'block';
+        margin:'auto';
+    }
+    .btn-flotante {
+        font-size: 12px;
+        right: 20px;
+        background-color:#79588548;
+    }
+
+  }

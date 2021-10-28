@@ -50,5 +50,15 @@ ul{
 @media (max-width: 600px) {
     .responsi{
         display: flex;
+        justify-content: space-between;
+    }
+    .todos{
+        background-color: rgba(102, 43, 158, 0.356);
+        border-color: rgb(178, 126, 202);
+        color: white;
+        background: rgba(97, 8, 124, 0.472);
+        padding: 5px;
+        border-radius: 10px;
+        margin: 5px;
     }
 }

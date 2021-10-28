@@ -65,11 +65,11 @@ body {
     text-align: center;
     background-color: rgb(49, 9, 68);
     position: absolute;
-    left: 100px;
-    right: 100px;
+    left: 140px;
+    right: 140px;
     top: 60%;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   .icono{

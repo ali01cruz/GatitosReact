@@ -29,7 +29,7 @@ export default function Landing(){
                 </header>
 
                 <main class="px-3 text-light" className="opacidad">
-                    <h1>Gatehook</h1>
+                    <h1>Cathook</h1>
                     <p class=" text-light lead">If you are thinking of adopting a cat but have doubts about its behavior or even if you already share your life with a feline but want to know more about the most common behaviors in this species, this website is for you.</p>
                     <p class="text-light lead">
                         <NavLink  to="/home">

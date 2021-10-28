@@ -19,14 +19,11 @@ function SideBar ({addFilxInte,palabra,getGatos,addFiltro}){
             <div className="sideBar">
            
                 <ul className="responsi" >
-                    <li>
-                    <br />
-                  
-                    </li>
+                 
                     <button className="todos" onClick={e=> {handleClick(e)}}>
                         All Cats
                     </button>
-                    <li> </li>
+                  
                     <li className="todos" >intelligence level:
                         <Xinteligencia/>
                     </li>
