@@ -29,7 +29,7 @@ export default function About(){
         <div class="container mt-2">
             <p className="my-2">
                 <span>
-                @Echo por Cruz Ali Emanuel  y Silvana Fuentes
+                @Made by Cruz Ali Emanuel  y Silvana Fuentes
                 </span>
             </p>
 
@@ -42,13 +42,13 @@ export default function About(){
                                 
                                 <Card.Title style={mystyle}>Cruz Ali Emanuel</Card.Title>
                                 <Card.Text>
-                                    soy alguien que le gusta el arte, 
-                                    la programacion lo veo como un Arte
+                                    I am someone who likes art,
+                                    I see the programming as an Art
                                 </Card.Text>
                             </Card.Body>
                             <ListGroup className="list-group-flush">
                                 <ListGroupItem>Abra Pampa</ListGroupItem>
-                                <ListGroupItem>Estudiante UNJU</ListGroupItem>
+                                <ListGroupItem>UNJU Student</ListGroupItem>
                             </ListGroup>
     
                         </Card>
@@ -61,13 +61,13 @@ export default function About(){
                                 
                                 <Card.Title>Silvana Fuentes</Card.Title>
                                 <Card.Text>
-                                    Me encanta todo la parte de Frontend
-                                        y todo lo relacionado con testing .
+                                        I love the whole Frontend part
+                                        and everything related to testing.
                                 </Card.Text>
                             </Card.Body>
                             <ListGroup className="list-group-flush">
                                 <ListGroupItem>San Salvador de Jujuy </ListGroupItem>
-                                <ListGroupItem> Egresada de la UNJU </ListGroupItem>
+                                <ListGroupItem> Graduated from UNJU </ListGroupItem>
                             </ListGroup>
                  
                         </Card>
