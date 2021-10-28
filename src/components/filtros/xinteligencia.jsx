@@ -16,7 +16,7 @@ function Xinteligencia ({addFilxInte, palabra,filterBy }){
                 (
                 <div className="inte">
                     <select style={{ backgroundColor:"rgb(102, 43, 158)"}} onChange={(event) => modificarChar(event.target.value)} >
-                        <option selected>select in</option>
+                        <option selected disabled> select in</option>
                             {Inteligence.map ( (raz) => (
                                 <option value={raz} key={raz}>
                                     {raz}
@@ -29,7 +29,7 @@ function Xinteligencia ({addFilxInte, palabra,filterBy }){
                 (
                 <div className="inte">
                     <select style={{ backgroundColor:"rgb(102, 43, 158)"}} onChange={(event) => modificarChar(event.target.value)} >
-                        <option selected>select in</option>
+                        <option selected disabled>select in</option>
                             {Inteligence.map ( (raz) => (
                                 <option value={raz} key={raz}>
                                     {raz}
