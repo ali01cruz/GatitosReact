@@ -19,7 +19,7 @@ import Cats from './components/catCard/cats';
 import NavBar from './components/navbarcomp/navBar.jsx';
 import { useEffect } from "react";
 import { Navbar } from 'react-bootstrap';
-
+import Error404 from './components/error404/error'
 
 function App() {
   let location = useLocation();
@@ -64,6 +64,7 @@ function App() {
             <About/>
           </Route>
 
+          <Route component={Error404}/>
         </Switch>
       </div>
       { location.pathname === '/' ? <></> : <Footer /> }

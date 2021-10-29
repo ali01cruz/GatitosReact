@@ -24,11 +24,11 @@ function SideBar ({addFilxInte,palabra,getGatos,addFiltro}){
                         All Cats
                     </button>
                   
-                    <li className="todos" >intelligence level:
+                    <li className="todos" > <span  className="perderrr" >intelligence level:</span>
                         <Xinteligencia/>
                     </li>
 
-                    <li className="todos" >card amount:
+                    <li className="todos" ><span className="perderrr" >card amount:</span>
                         <XCantidad/>
                     </li>
                 </ul>

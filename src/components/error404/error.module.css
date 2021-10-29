@@ -1,0 +1,14 @@
+.busc{
+    margin: 3px;
+      background-color: rgb(102, 43, 158);
+      border-color: rgb(178, 126, 202);
+      color: white;
+      background: rgb(82 48 98);
+      padding: 7px;
+}
+.busc:hover{
+    background: rgb(125, 75, 146);
+    border-color: darkgray;
+}
+
+
